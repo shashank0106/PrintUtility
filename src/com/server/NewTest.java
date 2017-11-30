@@ -56,7 +56,7 @@ public class NewTest {
 
 	private void run() throws IOException, PrinterException, DocumentException, PrintException {
 		ServerSocket socket = new ServerSocket(7655);
-		System.out.println("Server is  runnin");
+		System.out.println("Server is  running");
 
 		while (true) {
 			Socket sock = socket.accept();
@@ -64,7 +64,7 @@ public class NewTest {
 			new PrintStream(sock.getOutputStream());
 			BufferedReader bufferedReader = new BufferedReader(IR);
 
-			// XXX is this here
+		
 			while (bufferedReader.readLine().length() != 0) {
 
 			}
