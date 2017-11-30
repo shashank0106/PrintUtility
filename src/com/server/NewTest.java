@@ -64,8 +64,9 @@ public class NewTest {
 			new PrintStream(sock.getOutputStream());
 			BufferedReader bufferedReader = new BufferedReader(IR);
 
+			// XXX is this here
 			while (bufferedReader.readLine().length() != 0) {
-				;
+
 			}
 
 			StringBuilder payload = new StringBuilder();
@@ -92,7 +93,7 @@ public class NewTest {
 			        out.write("s");
 					out.close();
 					sock.close();
-				} catch (IOException arg11) {
+				} catch (IOException | RuntimeWorkerException | PrinterException arg11 ) {
 					arg11.printStackTrace();
 					out.write("HTTP/1.0 500 ERROR\r\n");
 				       
@@ -101,27 +102,6 @@ public class NewTest {
 			        out.write(arg11.toString());
 					out.close();
 					sock.close();
-				} catch( RuntimeWorkerException argll) {
-					argll.printStackTrace();
-					out.write("HTTP/1.0 500 ERROR\r\n");
-			       
-			        out.write("\r\n");
-			        out.write("<TITLE>Print Utility</TITLE>");
-			        out.write(argll.toString());
-					out.close();
-					sock.close();
-					
-				}
-				catch( PrintException argll) {
-					argll.printStackTrace();
-					out.write("HTTP/1.0 500 ERROR\r\n");
-			       
-			        out.write("\r\n");
-			        out.write("<TITLE>Print Utility</TITLE>");
-			        out.write(argll.toString());
-					out.close();
-					sock.close();
-					
 				}
 			}
 			else {
@@ -137,7 +117,7 @@ public class NewTest {
 		}
 	}
 
-	public static void printPdf() throws IOException, DocumentException {
+	private static void printPdf() throws IOException, DocumentException {
 		File file = new File(PDF);
 		file.getParentFile().mkdirs();
 		Rectangle pagesize = new Rectangle(135.0F, 590.0F);
@@ -160,7 +140,7 @@ public class NewTest {
 		document.close();
 	}
 
-	public static void print(String nameOFPrinter, int noOFCopies)
+	private static void print(String nameOFPrinter, int noOFCopies)
 			throws PrintException, PrinterException, IOException {
 		PDDocument document = PDDocument.load(new File(PDF));
 		PrintService myPrintService = findPrintService(nameOFPrinter);
