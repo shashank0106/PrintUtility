@@ -14,5 +14,13 @@
 	<classpathentry kind="lib" path="/home/archie/withoutprint1/jackson-annotations-2.8.0.jar"/>
 	<classpathentry kind="lib" path="/home/archie/withoutprint1/jackson-databind-2.8.8.jar"/>
 	<classpathentry kind="lib" path="/home/archie/withoutprint1/jackson-core-2.8.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jackson_api">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/shashank/Downloads/itextpdf-5.5.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shashank/Downloads/xmlworker-5.4.1.jar" sourcepath="C:/Users/shashank/AppData/Local/Temp/.org.sf.feeling.decompiler1511890686078/source/xmlworker-5.4.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shashank/Desktop/pdfbox-2.0.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

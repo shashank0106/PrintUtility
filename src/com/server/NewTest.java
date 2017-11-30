@@ -56,7 +56,7 @@ public class NewTest {
 
 	private void run() throws IOException, PrinterException, DocumentException, PrintException {
 		ServerSocket socket = new ServerSocket(7655);
-		System.out.println("Server is running");
+		System.out.println("Server is  runnin");
 
 		while (true) {
 			Socket sock = socket.accept();
@@ -96,7 +96,6 @@ public class NewTest {
 				} catch (IOException | RuntimeWorkerException | PrinterException arg11 ) {
 					arg11.printStackTrace();
 					out.write("HTTP/1.0 500 ERROR\r\n");
-				       
 			        out.write("\r\n");
 			        out.write("<TITLE>Print Utility</TITLE>");
 			        out.write(arg11.toString());
@@ -112,7 +111,7 @@ public class NewTest {
 			        out.write("s");
 					out.close();
 					sock.close();
-			}
+				}
 	  
 		}
 	}
