@@ -4,6 +4,15 @@ public class Printer {
 	int noOfCopies;
 	String nameOfPrinter;
 	String content;
+	String uid;
+
+	public String getUid() {
+		return uid;
+	}
+
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
 
 	public int getNoOfCopies() {
 		return noOfCopies;
